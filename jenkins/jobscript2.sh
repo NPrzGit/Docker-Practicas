@@ -16,3 +16,8 @@ do
 done
 sleep 30
 echo "Bien $nombre, terminamos las clases de $curso, nos vemos."
+
+#En Jenkins se enviaria de la siguiente forma
+#nombre="Nery"
+#curso="Jenkins"
+#/opt/jobscript.sh $nombre $curso
