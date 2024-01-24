@@ -1,0 +1,22 @@
+#para correr ejecutar docker-compose up -d
+#para ingresar al contenedor docker exec -ti jenkins bash
+#para iniciar docker compose-start
+version: '3'
+services:
+  jenkinks:
+    image: jenkins/docker
+    build: #en esta parte se especifica la carpeta donde se encuentra el dockerfile
+      context: dockerjenkins
+    ports:
+     - 8080:8080
+     - 50000:50000
+    container_name: jenkins
+    privileged: true
+    user: root
+    volumes:
+     - $PWD/jenkins_home:/var/jenkins_home #todo sobre el servicio y configuraciones de jenkis
+     - /var/run/docker.sock:/var/run/docker.sock #todo sobre el servicio y configuraciones de docker
+    networks:
+     - net
+networks:
+  net:
