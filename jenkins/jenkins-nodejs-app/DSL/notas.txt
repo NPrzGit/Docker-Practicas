@@ -1,0 +1,7 @@
+Cuando ya hayan hecho estos cambios, antes de ejecutar el job deberán ir a la terminal y ejecutar el siguiente comando:
+
+docker exec -ti jenkins bash
+
+y luego alli hacer:
+
+docker login

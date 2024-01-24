@@ -1,0 +1,2 @@
+CloudBees Docker Build and Publish plugin
+    Es un plugin para construir y subir imagenes al registro de docker
