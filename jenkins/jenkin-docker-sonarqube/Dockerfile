@@ -22,4 +22,6 @@ RUN curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-c
 
 RUN usermod -aG docker jenkins
 
+RUN chown jenkins /var/run/docker.sock
+
 USER jenkins
